@@ -1,0 +1,12 @@
+# Nginx demo
+
+version: '2'
+
+services:    
+  distribute:
+    image: nginx
+    volumes:
+        - ./conf.d:/etc/nginx/conf.d
+#        - ./distributedfiles:/usr/share/nginx/html
+    network_mode: "host"
+    container_name: nginx_distribute 
